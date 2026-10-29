@@ -4,47 +4,53 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Rabiul Islam's AI and Machine Learning Engineering portfolio, featuring NLP, Deep Learning, Computer Vision, LLMs, and Agentic AI projects.">
+
   <title>Rabiul Islam | AI/ML Engineer</title>
+  <meta name="description" content="Explore Rabiul Islam's AI/ML portfolio featuring Machine Learning, Deep Learning, NLP, Computer Vision, LLMs, RAG, and Agentic AI projects.">
+  <meta name="theme-color" content="#0b1120">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
-      --bg: #0b1020;
-      --card: #141c30;
-      --text: #f4f7ff;
-      --muted: #aab5cc;
-      --accent: #8b9cff;
-      --border: #29344d;
+      --bg: #0b1120;
+      --card: #111a2e;
+      --card-hover: #17233b;
+      --text: #f1f5f9;
+      --muted: #a7b4c8;
+      --blue: #60a5fa;
+      --blue-light: #93c5fd;
+      --border: #263650;
+      --max-width: 1100px;
     }
 
     * {
-      box-sizing: border-box;
       margin: 0;
       padding: 0;
+      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
+      scroll-padding-top: 90px;
     }
 
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: "Inter", sans-serif;
       background: var(--bg);
       color: var(--text);
       line-height: 1.7;
     }
 
     a {
-      color: var(--accent);
+      color: inherit;
       text-decoration: none;
     }
 
-    a:hover {
-      text-decoration: underline;
-    }
-
     .container {
-      width: min(1080px, 90%);
+      width: min(90%, var(--max-width));
       margin: auto;
     }
 
@@ -52,196 +58,404 @@
       position: sticky;
       top: 0;
       z-index: 10;
-      background: rgba(11, 16, 32, 0.95);
+      background: rgba(11, 17, 32, 0.95);
+      backdrop-filter: blur(12px);
       border-bottom: 1px solid var(--border);
     }
 
     nav {
-      min-height: 72px;
+      min-height: 76px;
       display: flex;
-      justify-content: space-between;
       align-items: center;
+      justify-content: space-between;
       gap: 20px;
     }
 
     .logo {
-      font-size: 1.15rem;
+      font-size: 1.4rem;
       font-weight: 800;
-      color: white;
+      letter-spacing: -1px;
     }
 
-    nav ul {
+    .logo span,
+    .accent {
+      color: var(--blue);
+    }
+
+    .nav-links {
       display: flex;
-      gap: 22px;
-      list-style: none;
       flex-wrap: wrap;
+      gap: 25px;
+      list-style: none;
     }
 
-    nav ul a {
+    .nav-links a {
       color: var(--muted);
       font-size: 0.92rem;
     }
 
-    section {
-      padding: 76px 0;
-      scroll-margin-top: 72px;
+    .nav-links a:hover {
+      color: var(--blue-light);
     }
 
+    /* Hero */
+
     .hero {
-      min-height: 490px;
-      display: flex;
+      min-height: 610px;
+      display: grid;
+      grid-template-columns: 1.4fr 0.6fr;
       align-items: center;
-      background:
-        radial-gradient(ellipse at 85% 20%, #27356a 0, transparent 45%);
+      gap: 50px;
+      padding-top: 75px;
+      padding-bottom: 75px;
     }
 
     .eyebrow {
-      color: var(--accent);
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      display: inline-block;
+      padding: 7px 13px;
+      border: 1px solid #29466c;
+      border-radius: 50px;
+      color: var(--blue-light);
+      background: #11213a;
       font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 22px;
     }
 
     h1 {
-      font-size: clamp(2.5rem, 7vw, 4.5rem);
+      font-size: clamp(2.7rem, 6vw, 4.5rem);
       line-height: 1.12;
-      margin: 16px 0;
+      letter-spacing: -2px;
+      margin-bottom: 22px;
     }
 
-    h2 {
-      font-size: 2rem;
-      margin-bottom: 18px;
-    }
-
-    h3 {
-      font-size: 1.2rem;
-      margin-bottom: 10px;
-    }
-
-    .gradient {
-      background: linear-gradient(90deg, #9baaff, #c6a5ff);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-
-    .intro, .section-intro {
-      max-width: 720px;
+    .hero p {
       color: var(--muted);
+      max-width: 650px;
+      font-size: 1.02rem;
+      margin-bottom: 28px;
     }
 
-    .intro {
-      font-size: 1.1rem;
+    .profile-wrap {
+      display: flex;
+      justify-content: center;
+    }
+
+    .profile-frame {
+      width: min(290px, 100%);
+      aspect-ratio: 1;
+      padding: 6px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #60a5fa, #818cf8, #38bdf8);
+      box-shadow: 0 0 55px rgba(96, 165, 250, 0.15);
+    }
+
+    .profile-photo {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      border-radius: 50%;
+      border: 4px solid var(--bg);
+      background: var(--card);
     }
 
     .buttons {
       display: flex;
-      gap: 14px;
       flex-wrap: wrap;
-      margin-top: 28px;
+      gap: 12px;
     }
 
     .btn {
-      display: inline-block;
-      padding: 11px 19px;
-      border: 1px solid var(--accent);
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .btn.primary {
-      color: #0b1020;
-      background: var(--accent);
-    }
-
-    .section-intro {
-      margin-bottom: 28px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 22px;
-    }
-
-    .card {
-      padding: 25px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 17px;
       border: 1px solid var(--border);
-      border-radius: 14px;
+      border-radius: 9px;
+      font-size: 0.88rem;
+      font-weight: 600;
+      transition: 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-primary {
+      background: var(--blue);
+      color: #08111f;
+      border-color: var(--blue);
+    }
+
+    .btn-primary:hover {
+      background: var(--blue-light);
+    }
+
+    .btn-secondary {
       background: var(--card);
+      color: var(--text);
     }
 
-    .card p {
+    .btn-secondary:hover {
+      background: var(--card-hover);
+      border-color: var(--blue);
+    }
+
+    /* Sections */
+
+    section:not(.hero) {
+      padding: 80px 0;
+    }
+
+    .section-heading {
+      margin-bottom: 32px;
+    }
+
+    .section-heading h2,
+    .contact-card h2 {
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      letter-spacing: -1px;
+      margin-bottom: 8px;
+    }
+
+    .section-heading p {
       color: var(--muted);
-      margin: 10px 0 18px;
+      max-width: 720px;
     }
 
-    .tag-list {
+    .about-card,
+    .project-card,
+    .contact-card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 17px;
+      padding: 28px;
+    }
+
+    .about-card p {
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .about-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Skills */
+
+    .skills-grid {
       display: flex;
       flex-wrap: wrap;
-      gap: 9px;
-      margin-top: 20px;
+      gap: 11px;
     }
 
-    .tag {
+    .skill {
+      padding: 9px 14px;
       border: 1px solid var(--border);
-      background: #1c2740;
-      border-radius: 6px;
-      padding: 5px 10px;
-      font-size: 0.85rem;
-      color: #d7dfff;
+      background: var(--card);
+      border-radius: 8px;
+      color: #dbeafe;
+      font-size: 0.88rem;
     }
 
-    .result {
-      color: #b7f4d0;
-      font-size: 0.92rem;
+    .skill:hover {
+      border-color: var(--blue);
     }
+
+    /* Projects */
+
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 23px;
+    }
+
+    .project-card {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      transition: 0.2s ease;
+    }
+
+    .project-card:hover {
+      transform: translateY(-4px);
+      border-color: #45648d;
+    }
+
+    .project-type {
+      color: var(--blue-light);
+      font-size: 0.78rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+    }
+
+    .project-card h3 {
+      font-size: 1.25rem;
+      line-height: 1.45;
+      margin-bottom: 14px;
+    }
+
+    .project-card > p {
+      color: var(--muted);
+      margin-bottom: 18px;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 22px;
+    }
+
+    .tags span {
+      background: var(--card-hover);
+      color: #dbeafe;
+      border-radius: 6px;
+      padding: 5px 9px;
+      font-size: 0.77rem;
+    }
+
+    .metrics {
+      width: 100%;
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+      margin-bottom: 20px;
+      color: #dbeafe;
+      font-size: 0.88rem;
+    }
+
+    .metrics p {
+      margin-bottom: 5px;
+    }
+
+    .project-link {
+      color: var(--blue-light);
+      font-weight: 600;
+      font-size: 0.92rem;
+      margin-top: auto;
+    }
+
+    .project-link:hover {
+      text-decoration: underline;
+    }
+
+    .all-projects {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    /* Contact */
 
     .contact-card {
       text-align: center;
-      padding: 38px 24px;
+      padding: 42px 25px;
+    }
+
+    .contact-card p {
+      max-width: 650px;
+      color: var(--muted);
+      margin: 0 auto 24px;
+    }
+
+    .contact-buttons {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
     }
 
     footer {
-      padding: 25px 0;
       border-top: 1px solid var(--border);
+      padding: 24px 0;
       text-align: center;
       color: var(--muted);
-      font-size: 0.9rem;
+      font-size: 0.84rem;
     }
 
-    @media (max-width: 650px) {
+    /* Responsive design */
+
+    @media (max-width: 760px) {
       nav {
-        padding: 14px 0;
-        align-items: flex-start;
         flex-direction: column;
+        justify-content: center;
+        padding: 15px 0;
+        gap: 10px;
       }
 
-      nav ul {
-        gap: 12px;
-      }
-
-      .grid {
-        grid-template-columns: 1fr;
-      }
-
-      section {
-        padding: 55px 0;
+      .nav-links {
+        justify-content: center;
+        gap: 17px;
       }
 
       .hero {
-        min-height: 420px;
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 35px;
+        padding-top: 55px;
+        padding-bottom: 60px;
+      }
+
+      .profile-wrap {
+        grid-row: 1;
+      }
+
+      .hero-content {
+        grid-row: 2;
+      }
+
+      .profile-frame {
+        width: 205px;
+      }
+
+      .hero p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .buttons {
+        justify-content: center;
+      }
+
+      section:not(.hero) {
+        padding: 58px 0;
+      }
+
+      .projects-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-card,
+      .project-card {
+        padding: 22px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html {
+        scroll-behavior: auto;
+      }
+
+      *,
+      *::before,
+      *::after {
+        transition: none !important;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- Navigation -->
   <header>
     <nav class="container">
-      <a class="logo" href="#home">Rabiul Islam<span class="gradient">.</span></a>
-      <ul>
+      <a href="#home" class="logo">Rabiul Islam<span>.</span></a>
+
+      <ul class="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
@@ -251,146 +465,253 @@
   </header>
 
   <main>
-    <section class="hero" id="home">
-      <div class="container">
-        <p class="eyebrow">AI / Machine Learning Engineering</p>
-        <h1>Building Practical<br><span class="gradient">AI Solutions.</span></h1>
-        <p class="intro">
-          I'm Rabiul Islam, an AI/ML enthusiast exploring Machine Learning,
-          Deep Learning, Natural Language Processing, Computer Vision,
-          LLM applications, and Agentic AI.
+
+    <!-- Homepage -->
+    <section class="container hero" id="home">
+
+      <div class="hero-content">
+        <span class="eyebrow">AI / Machine Learning Engineering</span>
+
+        <h1>
+          Building Practical<br>
+          <span class="accent">AI Solutions.</span>
+        </h1>
+
+        <p>
+          I'm Rabiul Islam, an AI/ML enthusiast exploring Machine
+          Learning, Deep Learning, Natural Language Processing,
+          Computer Vision, LLM applications, and Agentic AI.
         </p>
-        <div class="buttons">
-          <a class="btn primary" href="#projects">Explore My Projects</a>
-          <a class="btn" href="https://github.com/rabiul9137"
-             target="_blank" rel="noopener noreferrer">GitHub Profile ↗</a>
-        </div>
-      </div>
-    </section>
-
-    <section id="about">
-      <div class="container">
-        <h2>About Me</h2>
-        <p class="section-intro">
-          I enjoy turning AI concepts into practical applications.
-          Through hands-on projects, I explore machine learning algorithms,
-          NLP pipelines, transformer models, and multi-agent AI workflows.
-          My goal is to keep learning and build useful, reliable AI solutions.
-        </p>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="container">
-        <h2>Technical Skills</h2>
-        <p class="section-intro">
-          Technologies and concepts I use in my learning and projects.
-        </p>
-        <div class="card">
-          <div class="tag-list">
-            <span class="tag">Python</span>
-            <span class="tag">Machine Learning</span>
-            <span class="tag">Deep Learning</span>
-            <span class="tag">NLP</span>
-            <span class="tag">Computer Vision</span>
-            <span class="tag">TF-IDF</span>
-            <span class="tag">Word2Vec</span>
-            <span class="tag">BERT</span>
-            <span class="tag">LLMs</span>
-            <span class="tag">RAG</span>
-            <span class="tag">Agentic AI</span>
-            <span class="tag">CrewAI</span>
-            <span class="tag">Scikit-learn</span>
-            <span class="tag">Pandas</span>
-            <span class="tag">NumPy</span>
-            <span class="tag">Streamlit</span>
-            <span class="tag">Git & GitHub</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="projects">
-      <div class="container">
-        <h2>Featured Projects</h2>
-        <p class="section-intro">
-          A selection of my AI and Machine Learning projects.
-          Explore the repositories for source code and implementation details.
-        </p>
-
-        <div class="grid">
-          <article class="card">
-            <p class="eyebrow">Agentic AI</p>
-            <h3>🦁 Leo — Multi-Agent AI Tutor</h3>
-            <p>
-              An AI-powered study assistant that coordinates specialized
-              agents to plan lessons, explain concepts, generate quizzes,
-              evaluate answers, remember progress, and revisit weak concepts.
-            </p>
-            <div class="tag-list">
-              <span class="tag">CrewAI</span>
-              <span class="tag">Groq</span>
-              <span class="tag">Streamlit</span>
-              <span class="tag">Pydantic</span>
-            </div>
-            <p><a href="https://github.com/rabiul9137/leo-multi-agent-ai-tutor"
-              target="_blank" rel="noopener noreferrer">View source code ↗</a></p>
-          </article>
-
-          <article class="card">
-            <p class="eyebrow">Natural Language Processing</p>
-            <h3>🎬 IMDB Sentiment Analysis</h3>
-            <p>
-              A comparison of three approaches for classifying positive
-              and negative movie reviews using traditional NLP and BERT.
-            </p>
-            <p class="result">
-              TF-IDF: 89.54% accuracy<br>
-              Word2Vec: 84.82% accuracy<br>
-              BERT: 90.78% accuracy · 91.01% F1-score
-            </p>
-            <div class="tag-list">
-              <span class="tag">Python</span>
-              <span class="tag">TF-IDF</span>
-              <span class="tag">Word2Vec</span>
-              <span class="tag">BERT</span>
-            </div>
-            <p><a href="https://github.com/rabiul9137/sentiment-analysis-imdb"
-              target="_blank" rel="noopener noreferrer">View source code ↗</a></p>
-          </article>
-        </div>
 
         <div class="buttons">
-          <a class="btn" href="https://github.com/rabiul9137?tab=repositories"
-             target="_blank" rel="noopener noreferrer">
-            View All GitHub Repositories ↗
+          <a href="#projects" class="btn btn-primary">
+            Explore My Projects →
+          </a>
+
+          <a href="https://github.com/rabiul9137"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-secondary">
+            GitHub Profile ↗
+          </a>
+
+          <a href="Rabiul_Islam_AI_Engineer_Resume.pdf"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="btn btn-secondary">
+            View My Résumé ↓
           </a>
         </div>
       </div>
+
+      <!-- Existing photo in your GitHub repository -->
+      <div class="profile-wrap">
+        <div class="profile-frame">
+          <img
+            src="Passport%20Photo.jpg"
+            alt="Rabiul Islam"
+            class="profile-photo"
+            width="290"
+            height="290"
+            fetchpriority="high"
+          >
+        </div>
+      </div>
+
     </section>
 
+    <!-- About -->
+    <section id="about">
+      <div class="container">
+        <div class="section-heading">
+          <h2>About Me</h2>
+          <p>My journey in AI and Machine Learning Engineering.</p>
+        </div>
+
+        <div class="about-card">
+          <p>
+            I enjoy turning AI concepts into practical applications.
+            Through hands-on projects, I explore machine learning
+            algorithms, NLP pipelines, transformer models, and
+            multi-agent AI workflows.
+          </p>
+
+          <p>
+            My goal is to keep learning and build useful, reliable
+            AI solutions through experimentation, implementation,
+            and continuous improvement.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-heading">
+          <h2>Technical Skills</h2>
+          <p>Technologies and concepts explored in my projects.</p>
+        </div>
+
+        <div class="skills-grid">
+          <span class="skill">Python</span>
+          <span class="skill">Machine Learning</span>
+          <span class="skill">Deep Learning</span>
+          <span class="skill">NLP</span>
+          <span class="skill">Computer Vision</span>
+          <span class="skill">TF-IDF</span>
+          <span class="skill">Word2Vec</span>
+          <span class="skill">BERT</span>
+          <span class="skill">LLMs</span>
+          <span class="skill">RAG</span>
+          <span class="skill">Agentic AI</span>
+          <span class="skill">CrewAI</span>
+          <span class="skill">Scikit-learn</span>
+          <span class="skill">Pandas</span>
+          <span class="skill">NumPy</span>
+          <span class="skill">Streamlit</span>
+          <span class="skill">Pydantic</span>
+          <span class="skill">Git &amp; GitHub</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <div class="container">
+
+        <div class="section-heading">
+          <h2>Featured Projects</h2>
+          <p>
+            A selection of my AI and Machine Learning projects.
+            Visit GitHub to explore the source code.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Leo AI Tutor -->
+          <article class="project-card">
+            <span class="project-type">Agentic AI</span>
+
+            <h3>🦁 Leo — Multi-Agent AI Tutor</h3>
+
+            <p>
+              An AI-powered study assistant built to coordinate
+              specialized agents for lesson planning, concept
+              explanations, quiz generation, answer evaluation,
+              and revisiting difficult concepts.
+            </p>
+
+            <div class="tags">
+              <span>CrewAI</span>
+              <span>Groq</span>
+              <span>Streamlit</span>
+              <span>Pydantic</span>
+              <span>Python</span>
+            </div>
+
+            <a
+              href="https://github.com/rabiul9137/leo-multi-agent-ai-tutor"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link">
+              View Source Code ↗
+            </a>
+          </article>
+
+          <!-- IMDB sentiment analysis -->
+          <article class="project-card">
+            <span class="project-type">Natural Language Processing</span>
+
+            <h3>🎬 IMDB Sentiment Analysis</h3>
+
+            <p>
+              A comparative NLP project classifying positive and
+              negative movie reviews using traditional machine
+              learning techniques and transformer models.
+            </p>
+
+            <div class="tags">
+              <span>Python</span>
+              <span>TF-IDF</span>
+              <span>Word2Vec</span>
+              <span>BERT</span>
+              <span>Scikit-learn</span>
+            </div>
+
+            <div class="metrics">
+              <p>TF-IDF + Logistic Regression: 89.54% accuracy</p>
+              <p>Word2Vec + Logistic Regression: 84.82% accuracy</p>
+              <p>BERT: 90.78% accuracy</p>
+              <p>BERT F1-score: 91.01%</p>
+            </div>
+
+            <a
+              href="https://github.com/rabiul9137/sentiment-analysis-imdb"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="project-link">
+              View Source Code ↗
+            </a>
+          </article>
+
+        </div>
+
+        <div class="all-projects">
+          <a
+            href="https://github.com/rabiul9137?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn btn-secondary">
+            View All GitHub Repositories ↗
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact -->
     <section id="contact">
       <div class="container">
-        <div class="card contact-card">
+        <div class="contact-card">
           <h2>Let's Connect</h2>
-          <p class="section-intro" style="margin-left:auto;margin-right:auto">
-            Interested in AI, Machine Learning, or building practical AI
-            applications? Explore my work or connect with me professionally.
+
+          <p>
+            Interested in AI, Machine Learning, or building practical
+            AI applications? Explore my work or connect with me
+            professionally.
           </p>
-          <div class="buttons" style="justify-content:center">
-            <a class="btn primary" href="https://www.linkedin.com/in/rabiulislam01/"
-               target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
-            <a class="btn" href="https://github.com/rabiul9137"
-               target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+
+          <div class="contact-buttons">
+            <a
+              href="https://www.linkedin.com/in/rabiulislam01/"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-primary">
+              LinkedIn ↗
+            </a>
+
+            <a
+              href="https://github.com/rabiul9137"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn btn-secondary">
+              GitHub ↗
+            </a>
           </div>
         </div>
       </div>
     </section>
+
   </main>
 
   <footer>
     <div class="container">
-      © <span id="year"></span> Rabiul Islam · AI/ML Engineering Portfolio
+      <p>
+        © <span id="year"></span> Rabiul Islam.
+        Built with HTML and CSS.
+      </p>
     </div>
   </footer>
 
@@ -398,5 +719,6 @@
     document.getElementById("year").textContent =
       new Date().getFullYear();
   </script>
+
 </body>
 </html>
