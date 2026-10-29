@@ -5,41 +5,57 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Rabiul Islam | AI/ML Engineer</title>
-  <meta name="description" content="Explore Rabiul Islam's AI/ML portfolio featuring Machine Learning, Deep Learning, NLP, Computer Vision, LLMs, RAG, and Agentic AI projects.">
+  <title>Rabiul Islam | AI/ML Engineer Portfolio</title>
+
+  <meta
+    name="description"
+    content="Rabiul Islam's AI/ML engineering portfolio featuring Machine Learning, Deep Learning, NLP, LLMs, and Agentic AI projects."
+  >
+
+  <meta name="author" content="Rabiul Islam">
   <meta name="theme-color" content="#0b1120">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
 
   <style>
     :root {
       --bg: #0b1120;
-      --card: #111a2e;
-      --card-hover: #17233b;
+      --bg-soft: #101a2e;
+      --card: #111d32;
       --text: #f1f5f9;
-      --muted: #a7b4c8;
+      --muted: #a3b2c7;
       --blue: #60a5fa;
-      --blue-light: #93c5fd;
-      --border: #263650;
-      --max-width: 1100px;
+      --cyan: #67e8f9;
+      --border: rgba(148, 163, 184, 0.18);
+      --radius: 18px;
+      --max-width: 1120px;
     }
 
     * {
+      box-sizing: border-box;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
     html {
       scroll-behavior: smooth;
-      scroll-padding-top: 90px;
+      scroll-padding-top: 85px;
     }
 
     body {
-      font-family: "Inter", sans-serif;
-      background: var(--bg);
+      font-family: "Inter", Arial, sans-serif;
+      background:
+        radial-gradient(
+          ellipse at 85% 5%,
+          rgba(37, 99, 235, 0.14),
+          transparent 35%
+        ),
+        var(--bg);
       color: var(--text);
       line-height: 1.7;
     }
@@ -49,134 +65,113 @@
       text-decoration: none;
     }
 
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
     .container {
-      width: min(90%, var(--max-width));
-      margin: auto;
+      width: min(var(--max-width), 90%);
+      margin-inline: auto;
     }
 
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(11, 17, 32, 0.95);
-      backdrop-filter: blur(12px);
-      border-bottom: 1px solid var(--border);
+    .section {
+      padding: 88px 0;
     }
 
-    nav {
-      min-height: 76px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 20px;
-    }
-
-    .logo {
-      font-size: 1.4rem;
-      font-weight: 800;
+    .section-heading {
+      font-size: clamp(1.8rem, 4vw, 2.5rem);
+      line-height: 1.2;
+      margin-bottom: 14px;
       letter-spacing: -1px;
     }
 
-    .logo span,
-    .accent {
-      color: var(--blue);
+    .section-description {
+      color: var(--muted);
+      max-width: 680px;
+      margin-bottom: 34px;
+    }
+
+    .gradient-text {
+      background: linear-gradient(90deg, var(--blue), var(--cyan));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    /* Navigation */
+
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(11, 17, 32, 0.92);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .nav-inner {
+      min-height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .logo {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      white-space: nowrap;
     }
 
     .nav-links {
       display: flex;
-      flex-wrap: wrap;
-      gap: 25px;
+      align-items: center;
+      gap: 27px;
       list-style: none;
     }
 
     .nav-links a {
       color: var(--muted);
-      font-size: 0.92rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
     }
 
     .nav-links a:hover {
-      color: var(--blue-light);
+      color: var(--cyan);
     }
 
-    /* Hero */
+    /* Buttons */
 
-    .hero {
-      min-height: 610px;
-      display: grid;
-      grid-template-columns: 1.4fr 0.6fr;
-      align-items: center;
-      gap: 50px;
-      padding-top: 75px;
-      padding-bottom: 75px;
-    }
-
-    .eyebrow {
-      display: inline-block;
-      padding: 7px 13px;
-      border: 1px solid #29466c;
-      border-radius: 50px;
-      color: var(--blue-light);
-      background: #11213a;
-      font-size: 0.82rem;
-      font-weight: 600;
-      margin-bottom: 22px;
-    }
-
-    h1 {
-      font-size: clamp(2.7rem, 6vw, 4.5rem);
-      line-height: 1.12;
-      letter-spacing: -2px;
-      margin-bottom: 22px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 650px;
-      font-size: 1.02rem;
-      margin-bottom: 28px;
-    }
-
-    .profile-wrap {
-      display: flex;
-      justify-content: center;
-    }
-
-    .profile-frame {
-      width: min(290px, 100%);
-      aspect-ratio: 1;
-      padding: 6px;
-      border-radius: 50%;
-      background: linear-gradient(135deg, #60a5fa, #818cf8, #38bdf8);
-      box-shadow: 0 0 55px rgba(96, 165, 250, 0.15);
-    }
-
-    .profile-photo {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center 30%;
-      border-radius: 50%;
-      border: 4px solid var(--bg);
-      background: var(--card);
-    }
-
-    .buttons {
+    .button-group {
       display: flex;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 13px;
+      margin-top: 28px;
     }
 
     .btn {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      padding: 12px 17px;
-      border: 1px solid var(--border);
-      border-radius: 9px;
-      font-size: 0.88rem;
-      font-weight: 600;
-      transition: 0.2s ease;
+      gap: 9px;
+      min-height: 46px;
+      padding: 11px 19px;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      font-size: 0.91rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition:
+        transform 0.2s,
+        background 0.2s,
+        border-color 0.2s;
     }
 
     .btn:hover {
@@ -184,59 +179,146 @@
     }
 
     .btn-primary {
-      background: var(--blue);
-      color: #08111f;
-      border-color: var(--blue);
+      background: linear-gradient(110deg, #3b82f6, #0891b2);
+      color: #fff;
     }
 
     .btn-primary:hover {
-      background: var(--blue-light);
+      background: linear-gradient(110deg, #2563eb, #0e7490);
     }
 
     .btn-secondary {
-      background: var(--card);
+      background: rgba(148, 163, 184, 0.07);
       color: var(--text);
+      border-color: var(--border);
     }
 
     .btn-secondary:hover {
-      background: var(--card-hover);
       border-color: var(--blue);
+      background: rgba(96, 165, 250, 0.08);
     }
 
-    /* Sections */
+    /* Hero */
 
-    section:not(.hero) {
-      padding: 80px 0;
+    .hero {
+      min-height: 650px;
+      display: flex;
+      align-items: center;
+      padding: 75px 0 90px;
     }
 
-    .section-heading {
-      margin-bottom: 32px;
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.45fr 0.75fr;
+      align-items: center;
+      gap: 65px;
     }
 
-    .section-heading h2,
-    .contact-card h2 {
-      font-size: clamp(1.8rem, 4vw, 2.4rem);
-      letter-spacing: -1px;
-      margin-bottom: 8px;
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      color: var(--cyan);
+      font-size: 0.83rem;
+      font-weight: 700;
+      letter-spacing: 1.6px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
     }
 
-    .section-heading p {
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #34d399;
+      box-shadow: 0 0 12px rgba(52, 211, 153, 0.5);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.6rem, 6vw, 4.8rem);
+      line-height: 1.08;
+      letter-spacing: -2.8px;
+      margin-bottom: 22px;
+    }
+
+    .hero h2 {
+      color: #dbeafe;
+      font-size: clamp(1.15rem, 2.5vw, 1.55rem);
+      font-weight: 600;
+      margin-bottom: 18px;
+    }
+
+    .hero-description {
       color: var(--muted);
-      max-width: 720px;
+      max-width: 650px;
+      font-size: 1.02rem;
     }
 
-    .about-card,
-    .project-card,
-    .contact-card {
-      background: var(--card);
+    .hero-note {
+      margin-top: 18px;
+      color: #8294ae;
+      font-size: 0.86rem;
+    }
+
+    /* Profile photo */
+
+    .profile-area {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .profile-frame {
+      position: relative;
+      width: min(300px, 100%);
+      aspect-ratio: 1;
+      padding: 7px;
+      border-radius: 50%;
+      background: linear-gradient(145deg, var(--cyan), #2563eb, #7c3aed);
+      box-shadow: 0 0 65px rgba(59, 130, 246, 0.18);
+    }
+
+    .profile-photo {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 50%;
+      border: 5px solid var(--bg);
+      background: var(--bg-soft);
+    }
+
+    .photo-fallback {
+      display: none;
+      width: 100%;
+      height: 100%;
+      border: 5px solid var(--bg);
+      border-radius: 50%;
+      background: var(--bg-soft);
+      color: var(--cyan);
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      font-weight: 800;
+    }
+
+    /* About */
+
+    .about-card {
+      background: linear-gradient(
+        145deg,
+        rgba(17, 29, 50, 0.95),
+        rgba(16, 26, 46, 0.8)
+      );
       border: 1px solid var(--border);
-      border-radius: 17px;
-      padding: 28px;
+      border-radius: var(--radius);
+      padding: 30px;
     }
 
     .about-card p {
       color: var(--muted);
-      margin-bottom: 14px;
+      margin-bottom: 15px;
     }
 
     .about-card p:last-child {
@@ -252,16 +334,22 @@
     }
 
     .skill {
-      padding: 9px 14px;
+      display: inline-flex;
+      align-items: center;
+      padding: 10px 15px;
+      background: rgba(17, 29, 50, 0.8);
       border: 1px solid var(--border);
-      background: var(--card);
-      border-radius: 8px;
+      border-radius: 9px;
       color: #dbeafe;
-      font-size: 0.88rem;
+      font-size: 0.9rem;
+      transition:
+        border-color 0.2s,
+        transform 0.2s;
     }
 
     .skill:hover {
       border-color: var(--blue);
+      transform: translateY(-2px);
     }
 
     /* Projects */
@@ -275,162 +363,200 @@
     .project-card {
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      transition: 0.2s ease;
+      padding: 27px;
+      min-width: 0;
+      background: linear-gradient(
+        150deg,
+        rgba(17, 29, 50, 0.98),
+        rgba(13, 23, 40, 0.98)
+      );
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      transition:
+        transform 0.25s,
+        border-color 0.25s;
     }
 
     .project-card:hover {
-      transform: translateY(-4px);
-      border-color: #45648d;
+      transform: translateY(-5px);
+      border-color: rgba(96, 165, 250, 0.65);
     }
 
-    .project-type {
-      color: var(--blue-light);
+    .project-category {
+      color: var(--cyan);
       font-size: 0.78rem;
       font-weight: 700;
+      letter-spacing: 1px;
       text-transform: uppercase;
-      letter-spacing: 0.8px;
-      margin-bottom: 12px;
+      margin-bottom: 13px;
     }
 
     .project-card h3 {
-      font-size: 1.25rem;
-      line-height: 1.45;
-      margin-bottom: 14px;
+      font-size: 1.35rem;
+      line-height: 1.4;
+      margin-bottom: 13px;
     }
 
-    .project-card > p {
+    .project-card p {
       color: var(--muted);
-      margin-bottom: 18px;
+      font-size: 0.94rem;
+      margin-bottom: 20px;
     }
 
-    .tags {
+    .project-tags {
       display: flex;
       flex-wrap: wrap;
       gap: 8px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
 
-    .tags span {
-      background: var(--card-hover);
-      color: #dbeafe;
-      border-radius: 6px;
+    .tag {
+      font-size: 0.76rem;
       padding: 5px 9px;
-      font-size: 0.77rem;
-    }
-
-    .metrics {
-      width: 100%;
-      padding-top: 14px;
-      border-top: 1px solid var(--border);
-      margin-bottom: 20px;
-      color: #dbeafe;
-      font-size: 0.88rem;
-    }
-
-    .metrics p {
-      margin-bottom: 5px;
+      color: #bfdbfe;
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(96, 165, 250, 0.17);
+      border-radius: 6px;
     }
 
     .project-link {
-      color: var(--blue-light);
-      font-weight: 600;
-      font-size: 0.92rem;
+      color: var(--cyan);
+      font-weight: 700;
+      font-size: 0.9rem;
       margin-top: auto;
+      align-self: flex-start;
     }
 
     .project-link:hover {
-      text-decoration: underline;
+      color: #fff;
     }
 
-    .all-projects {
-      text-align: center;
-      margin-top: 30px;
+    .metrics {
+      display: grid;
+      gap: 7px;
+      padding: 15px;
+      margin-bottom: 19px;
+      background: rgba(2, 6, 23, 0.35);
+      border-radius: 9px;
+      color: #cbd5e1;
+      font-size: 0.86rem;
     }
 
     /* Contact */
 
     .contact-card {
+      padding: 38px;
       text-align: center;
-      padding: 42px 25px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background:
+        radial-gradient(
+          ellipse at top,
+          rgba(37, 99, 235, 0.13),
+          transparent 65%
+        ),
+        var(--card);
     }
 
-    .contact-card p {
-      max-width: 650px;
-      color: var(--muted);
-      margin: 0 auto 24px;
+    .contact-card .section-description {
+      margin: 0 auto;
     }
 
-    .contact-buttons {
+    .contact-links {
       display: flex;
       justify-content: center;
       flex-wrap: wrap;
-      gap: 12px;
+      gap: 13px;
+      margin-top: 26px;
     }
+
+    /* Footer */
 
     footer {
       border-top: 1px solid var(--border);
-      padding: 24px 0;
-      text-align: center;
-      color: var(--muted);
+      padding: 25px 0;
+      color: #8294ae;
       font-size: 0.84rem;
+      text-align: center;
     }
 
-    /* Responsive design */
+    /* Responsive */
 
-    @media (max-width: 760px) {
-      nav {
-        flex-direction: column;
-        justify-content: center;
-        padding: 15px 0;
-        gap: 10px;
-      }
-
-      .nav-links {
-        justify-content: center;
-        gap: 17px;
-      }
-
+    @media (max-width: 800px) {
       .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
-        gap: 35px;
-        padding-top: 55px;
-        padding-bottom: 60px;
+        min-height: auto;
+        padding: 65px 0 75px;
       }
 
-      .profile-wrap {
-        grid-row: 1;
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 42px;
       }
 
       .hero-content {
-        grid-row: 2;
+        order: 2;
+      }
+
+      .profile-area {
+        order: 1;
       }
 
       .profile-frame {
-        width: 205px;
+        width: 220px;
       }
 
-      .hero p {
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .buttons {
-        justify-content: center;
-      }
-
-      section:not(.hero) {
-        padding: 58px 0;
+      .hero h1 {
+        letter-spacing: -1.8px;
       }
 
       .projects-grid {
         grid-template-columns: 1fr;
       }
 
+      .section {
+        padding: 68px 0;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .nav-inner {
+        min-height: 65px;
+        gap: 12px;
+      }
+
+      .logo {
+        font-size: 0.98rem;
+      }
+
+      .nav-links {
+        gap: 12px;
+      }
+
+      .nav-links a {
+        font-size: 0.77rem;
+      }
+
+      .hero h1 {
+        font-size: 2.65rem;
+      }
+
+      .button-group {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn {
+        width: 100%;
+      }
+
       .about-card,
-      .project-card {
-        padding: 22px;
+      .project-card,
+      .contact-card {
+        padding: 23px;
+      }
+
+      .section-heading {
+        letter-spacing: -0.6px;
       }
     }
 
@@ -442,7 +568,7 @@
       *,
       *::before,
       *::after {
-        transition: none !important;
+        transition-duration: 0.01ms !important;
       }
     }
   </style>
@@ -451,9 +577,12 @@
 <body>
 
   <!-- Navigation -->
-  <header>
-    <nav class="container">
-      <a href="#home" class="logo">Rabiul Islam<span>.</span></a>
+  <header class="navbar">
+    <nav class="container nav-inner" aria-label="Main navigation">
+
+      <a class="logo" href="#home">
+        Rabiul <span class="gradient-text">Islam.</span>
+      </a>
 
       <ul class="nav-links">
         <li><a href="#about">About</a></li>
@@ -461,209 +590,272 @@
         <li><a href="#projects">Projects</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
+
     </nav>
   </header>
 
   <main>
 
-    <!-- Homepage -->
-    <section class="container hero" id="home">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
 
-      <div class="hero-content">
-        <span class="eyebrow">AI / Machine Learning Engineering</span>
+        <div class="hero-content">
 
-        <h1>
-          Building Practical<br>
-          <span class="accent">AI Solutions.</span>
-        </h1>
+          <div class="eyebrow">
+            <span class="status-dot"></span>
+            AI / Machine Learning Engineering
+          </div>
 
-        <p>
-          I'm Rabiul Islam, an AI/ML enthusiast exploring Machine
-          Learning, Deep Learning, Natural Language Processing,
-          Computer Vision, LLM applications, and Agentic AI.
+          <h1>
+            Building Practical
+            <span class="gradient-text">AI Solutions.</span>
+          </h1>
+
+          <h2>
+            Hello, I'm Rabiul Islam.
+          </h2>
+
+          <p class="hero-description">
+            I'm an AI/ML enthusiast exploring Machine Learning,
+            Deep Learning, Natural Language Processing, Computer Vision,
+            Large Language Models, and Agentic AI through hands-on projects.
+          </p>
+
+          <div class="button-group">
+
+            <a class="btn btn-primary" href="#projects">
+              Explore My Projects →
+            </a>
+
+            <a
+              class="btn btn-secondary"
+              href="https://github.com/rabiul9137"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub Profile ↗
+            </a>
+
+            <a
+              class="btn btn-secondary"
+              href="./resume.pdf"
+              download="Rabiul_Islam_AI_Engineer_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download My Résumé ↓
+            </a>
+
+          </div>
+
+          <p class="hero-note">
+            Focused on learning, experimentation, and building useful AI applications.
+          </p>
+
+        </div>
+
+        <!-- Profile Photo -->
+        <div class="profile-area">
+
+          <div class="profile-frame">
+
+            <img
+              id="profile-photo"
+              class="profile-photo"
+              src="./profile.jpg"
+              alt="Rabiul Islam - AI/ML Engineer"
+              width="300"
+              height="300"
+              fetchpriority="high"
+              onerror="this.style.display='none'; document.getElementById('photo-fallback').style.display='flex';"
+            >
+
+            <div id="photo-fallback" class="photo-fallback" aria-hidden="true">
+              RI
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+      <div class="container">
+
+        <h2 class="section-heading">
+          About <span class="gradient-text">Me</span>
+        </h2>
+
+        <p class="section-description">
+          Learning by building, experimenting, and solving practical problems.
         </p>
 
-        <div class="buttons">
-          <a href="#projects" class="btn btn-primary">
-            Explore My Projects →
-          </a>
-
-          <a href="https://github.com/rabiul9137"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="btn btn-secondary">
-            GitHub Profile ↗
-          </a>
-
-          <a href="Rabiul_Islam_AI_Engineer_Resume.pdf"
-             target="_blank"
-             rel="noopener noreferrer"
-             class="btn btn-secondary">
-            View My Résumé ↓
-          </a>
-        </div>
-      </div>
-
-      <!-- Existing photo in your GitHub repository -->
-      <div class="profile-wrap">
-        <div class="profile-frame">
-          <img
-            src="Passport%20Photo.jpg"
-            alt="Rabiul Islam"
-            class="profile-photo"
-            width="290"
-            height="290"
-            fetchpriority="high"
-          >
-        </div>
-      </div>
-
-    </section>
-
-    <!-- About -->
-    <section id="about">
-      <div class="container">
-        <div class="section-heading">
-          <h2>About Me</h2>
-          <p>My journey in AI and Machine Learning Engineering.</p>
-        </div>
-
         <div class="about-card">
+
           <p>
             I enjoy turning AI concepts into practical applications.
-            Through hands-on projects, I explore machine learning
-            algorithms, NLP pipelines, transformer models, and
-            multi-agent AI workflows.
+            Through hands-on projects, I explore machine learning algorithms,
+            NLP pipelines, transformer models, and multi-agent AI workflows.
           </p>
 
           <p>
-            My goal is to keep learning and build useful, reliable
-            AI solutions through experimentation, implementation,
-            and continuous improvement.
+            My interests include developing LLM-powered applications,
+            experimenting with modern AI frameworks, and understanding
+            how intelligent systems can help solve real-world problems.
           </p>
+
+          <p>
+            My goal is to continue growing as an AI/ML Engineer by building
+            useful, reliable, and well-documented projects.
+          </p>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Skills -->
-    <section id="skills">
+    <!-- Skills Section -->
+    <section class="section" id="skills">
       <div class="container">
-        <div class="section-heading">
-          <h2>Technical Skills</h2>
-          <p>Technologies and concepts explored in my projects.</p>
-        </div>
+
+        <h2 class="section-heading">
+          Technical <span class="gradient-text">Skills</span>
+        </h2>
+
+        <p class="section-description">
+          Technologies and concepts I use in my learning and projects.
+        </p>
 
         <div class="skills-grid">
+
           <span class="skill">Python</span>
           <span class="skill">Machine Learning</span>
           <span class="skill">Deep Learning</span>
-          <span class="skill">NLP</span>
+          <span class="skill">Natural Language Processing</span>
           <span class="skill">Computer Vision</span>
-          <span class="skill">TF-IDF</span>
-          <span class="skill">Word2Vec</span>
-          <span class="skill">BERT</span>
-          <span class="skill">LLMs</span>
-          <span class="skill">RAG</span>
-          <span class="skill">Agentic AI</span>
-          <span class="skill">CrewAI</span>
           <span class="skill">Scikit-learn</span>
           <span class="skill">Pandas</span>
           <span class="skill">NumPy</span>
+          <span class="skill">TF-IDF</span>
+          <span class="skill">Word2Vec</span>
+          <span class="skill">BERT</span>
+          <span class="skill">Large Language Models</span>
+          <span class="skill">RAG</span>
+          <span class="skill">Agentic AI</span>
+          <span class="skill">CrewAI</span>
+          <span class="skill">Groq</span>
           <span class="skill">Streamlit</span>
           <span class="skill">Pydantic</span>
-          <span class="skill">Git &amp; GitHub</span>
+          <span class="skill">Git & GitHub</span>
+
         </div>
+
       </div>
     </section>
 
-    <!-- Projects -->
-    <section id="projects">
+    <!-- Projects Section -->
+    <section class="section" id="projects">
       <div class="container">
 
-        <div class="section-heading">
-          <h2>Featured Projects</h2>
-          <p>
-            A selection of my AI and Machine Learning projects.
-            Visit GitHub to explore the source code.
-          </p>
-        </div>
+        <h2 class="section-heading">
+          Featured <span class="gradient-text">Projects</span>
+        </h2>
+
+        <p class="section-description">
+          A selection of my AI and Machine Learning projects.
+          Visit the repositories to explore the source code and implementation.
+        </p>
 
         <div class="projects-grid">
 
-          <!-- Leo AI Tutor -->
+          <!-- Project 1 -->
           <article class="project-card">
-            <span class="project-type">Agentic AI</span>
+
+            <div class="project-category">
+              Agentic AI
+            </div>
 
             <h3>🦁 Leo — Multi-Agent AI Tutor</h3>
 
             <p>
-              An AI-powered study assistant built to coordinate
-              specialized agents for lesson planning, concept
-              explanations, quiz generation, answer evaluation,
-              and revisiting difficult concepts.
+              An AI-powered study assistant built with a multi-agent
+              workflow. The project explores lesson planning, concept
+              explanations, quiz generation, answer evaluation, and
+              personalized learning support.
             </p>
 
-            <div class="tags">
-              <span>CrewAI</span>
-              <span>Groq</span>
-              <span>Streamlit</span>
-              <span>Pydantic</span>
-              <span>Python</span>
+            <div class="project-tags">
+              <span class="tag">CrewAI</span>
+              <span class="tag">Groq</span>
+              <span class="tag">Streamlit</span>
+              <span class="tag">Pydantic</span>
+              <span class="tag">Python</span>
             </div>
 
             <a
+              class="project-link"
               href="https://github.com/rabiul9137/leo-multi-agent-ai-tutor"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-link">
+            >
               View Source Code ↗
             </a>
+
           </article>
 
-          <!-- IMDB sentiment analysis -->
+          <!-- Project 2 -->
           <article class="project-card">
-            <span class="project-type">Natural Language Processing</span>
+
+            <div class="project-category">
+              Natural Language Processing
+            </div>
 
             <h3>🎬 IMDB Sentiment Analysis</h3>
 
             <p>
-              A comparative NLP project classifying positive and
-              negative movie reviews using traditional machine
-              learning techniques and transformer models.
+              A comparison of traditional NLP techniques and transformer
+              models for classifying movie reviews as positive or negative.
             </p>
 
-            <div class="tags">
-              <span>Python</span>
-              <span>TF-IDF</span>
-              <span>Word2Vec</span>
-              <span>BERT</span>
-              <span>Scikit-learn</span>
+            <div class="metrics">
+              <div><strong>TF-IDF:</strong> 89.54% accuracy</div>
+              <div><strong>Word2Vec:</strong> 84.82% accuracy</div>
+              <div><strong>BERT:</strong> 90.78% accuracy</div>
+              <div><strong>BERT F1-score:</strong> 91.01%</div>
             </div>
 
-            <div class="metrics">
-              <p>TF-IDF + Logistic Regression: 89.54% accuracy</p>
-              <p>Word2Vec + Logistic Regression: 84.82% accuracy</p>
-              <p>BERT: 90.78% accuracy</p>
-              <p>BERT F1-score: 91.01%</p>
+            <div class="project-tags">
+              <span class="tag">Python</span>
+              <span class="tag">TF-IDF</span>
+              <span class="tag">Word2Vec</span>
+              <span class="tag">BERT</span>
+              <span class="tag">NLP</span>
             </div>
 
             <a
+              class="project-link"
               href="https://github.com/rabiul9137/sentiment-analysis-imdb"
               target="_blank"
               rel="noopener noreferrer"
-              class="project-link">
+            >
               View Source Code ↗
             </a>
+
           </article>
 
         </div>
 
-        <div class="all-projects">
+        <div class="button-group">
           <a
+            class="btn btn-primary"
             href="https://github.com/rabiul9137?tab=repositories"
             target="_blank"
             rel="noopener noreferrer"
-            class="btn btn-secondary">
+          >
             View All GitHub Repositories ↗
           </a>
         </div>
@@ -671,41 +863,61 @@
       </div>
     </section>
 
-    <!-- Contact -->
-    <section id="contact">
+    <!-- Contact Section -->
+    <section class="section" id="contact">
       <div class="container">
-        <div class="contact-card">
-          <h2>Let's Connect</h2>
 
-          <p>
+        <div class="contact-card">
+
+          <h2 class="section-heading">
+            Let's <span class="gradient-text">Connect</span>
+          </h2>
+
+          <p class="section-description">
             Interested in AI, Machine Learning, or building practical
-            AI applications? Explore my work or connect with me
-            professionally.
+            AI applications? Explore my work or connect with me professionally.
           </p>
 
-          <div class="contact-buttons">
+          <div class="contact-links">
+
             <a
+              class="btn btn-primary"
               href="https://www.linkedin.com/in/rabiulislam01/"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-primary">
+            >
               LinkedIn ↗
             </a>
 
             <a
+              class="btn btn-secondary"
               href="https://github.com/rabiul9137"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-secondary">
+            >
               GitHub ↗
             </a>
+
+            <a
+              class="btn btn-secondary"
+              href="./resume.pdf"
+              download="Rabiul_Islam_AI_Engineer_Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Download Résumé ↓
+            </a>
+
           </div>
+
         </div>
+
       </div>
     </section>
 
   </main>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>
