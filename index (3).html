@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rabiul Islam | AI/ML Engineer</title>
+<meta name="description" content="Rabiul Islam is an AI/ML engineer building NLP, LLM and agentic AI applications. See projects, skills and contact details.">
+<meta name="author" content="Rabiul Islam">
+<meta property="og:title" content="Rabiul Islam | AI/ML Engineer">
+<meta property="og:description" content="NLP, LLM and agentic AI projects, with source code.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f6f7f9; --surface:#ffffff; --ink:#18212f; --muted:#5a6575; --line:#dde1e8;
+  --accent:#2447c5; --accent-soft:#e6ebfb; --bar:#c5ccda;
+  --serif:'Source Serif 4',Georgia,serif; --sans:'Manrope',system-ui,-apple-system,'Segoe UI',sans-serif;
+}
+:root:not([data-theme="light"]){}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#10151d; --surface:#171e29; --ink:#e8ecf2; --muted:#9aa5b6; --line:#2a3342;
+    --accent:#7d9bff; --accent-soft:#1d2744; --bar:#3a465a;
+  }
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{font-family:var(--sans);background:var(--bg);color:var(--ink);line-height:1.65;font-size:16px;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+
+/* Header */
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+.brand{font-family:var(--serif);font-weight:600;font-size:1.2rem;text-decoration:none}
+nav ul{display:flex;gap:28px;list-style:none}
+nav a{text-decoration:none;color:var(--muted);font-size:.95rem;font-weight:500;transition:color .2s}
+nav a:hover{color:var(--ink)}
+
+/* Hero */
+.hero{padding:88px 0 72px}
+.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.role{color:var(--accent);font-weight:600;font-size:.95rem;margin-bottom:14px}
+h1{font-family:var(--serif);font-weight:600;font-size:clamp(2.4rem,5.2vw,3.7rem);line-height:1.1;letter-spacing:-.02em;margin-bottom:22px}
+.lead{color:var(--muted);font-size:1.1rem;max-width:56ch;margin-bottom:32px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 22px;border-radius:8px;font-weight:600;font-size:.95rem;text-decoration:none;border:1px solid var(--line);background:var(--surface);transition:border-color .2s,transform .2s}
+.btn:hover{border-color:var(--accent)}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn.primary{color:#0c1220}}
+.btn.primary:hover{transform:translateY(-1px)}
+
+/* Results panel: the one memorable element */
+.panel{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px}
+.panel h2{font-family:var(--sans);font-size:1rem;font-weight:700;margin-bottom:4px}
+.panel p.sub{color:var(--muted);font-size:.88rem;margin-bottom:22px}
+.row{margin-bottom:16px}
+.row:last-of-type{margin-bottom:0}
+.row-top{display:flex;justify-content:space-between;font-size:.9rem;font-weight:600;margin-bottom:6px}
+.track{height:10px;background:var(--accent-soft);border-radius:99px;overflow:hidden}
+.fill{height:100%;background:var(--bar);border-radius:99px;transform-origin:left;animation:grow 1s cubic-bezier(.2,.7,.2,1) both}
+.fill.best{background:var(--accent)}
+@keyframes grow{from{transform:scaleX(0)}}
+.panel .note{margin-top:20px;padding-top:16px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem}
+
+/* Sections */
+section{padding:72px 0;border-top:1px solid var(--line)}
+.sec-head{margin-bottom:36px;max-width:60ch}
+h2.title{font-family:var(--serif);font-weight:600;font-size:2rem;letter-spacing:-.01em;margin-bottom:8px}
+.sec-head p{color:var(--muted)}
+
+.about{display:grid;grid-template-columns:240px 1fr;gap:48px;align-items:start}
+.photo{width:100%;aspect-ratio:1;border-radius:14px;object-fit:cover;background:var(--accent-soft);border:1px solid var(--line)}
+.about p{margin-bottom:16px;max-width:64ch;color:var(--muted)}
+.about p:first-child{color:var(--ink);font-size:1.08rem}
+
+/* Education */
+.edu{display:grid;grid-template-columns:200px 1fr;gap:32px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:28px 32px}
+.edu-meta span{color:var(--accent);font-weight:600;font-size:.95rem}
+.edu h3{font-family:var(--serif);font-size:1.45rem;font-weight:600;margin-bottom:4px}
+.edu .school{font-weight:600;margin-bottom:10px}
+.edu-desc{color:var(--muted);max-width:60ch}
+@media (max-width:820px){.edu{grid-template-columns:1fr;gap:8px;padding:24px}}
+
+/* Creative layer */
+:root[data-theme="dark"]{--bg:#10151d;--surface:#171e29;--ink:#e8ecf2;--muted:#9aa5b6;--line:#2a3342;--accent:#7d9bff;--accent-soft:#1d2744;--bar:#3a465a}
+:root[data-theme="dark"] .btn.primary{color:#0c1220}
+.progress{position:fixed;top:0;left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:20}
+.toggle{width:38px;height:38px;border-radius:50%;border:1px solid var(--line);background:var(--surface);color:var(--ink);font-size:1.05rem;cursor:pointer;transition:border-color .2s,transform .3s}
+.toggle:hover{border-color:var(--accent);transform:rotate(180deg)}
+.hero{position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(var(--line) 1px,transparent 1px);background-size:24px 24px;-webkit-mask-image:linear-gradient(to bottom,#000,transparent 85%);mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(420px circle at var(--mx,72%) var(--my,28%),var(--accent-soft),transparent 70%);pointer-events:none}
+.hero .wrap{position:relative;z-index:1}
+.rot{display:inline-block;color:var(--ink);animation:swap .5s ease}
+@keyframes swap{from{opacity:0;transform:translateY(6px)}}
+.project,.group{transition:transform .25s,border-color .25s}
+.project:hover,.group:hover{transform:translateY(-3px);border-color:var(--accent)}
+.tags span{transition:background .2s,color .2s}
+.tags span:hover{background:var(--accent);color:var(--bg)}
+.hobbies{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.hobbies li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:26px;transition:transform .25s,border-color .25s}
+.hobbies li:hover{transform:translateY(-4px);border-color:var(--accent)}
+.ico{display:grid;place-items:center;width:52px;height:52px;border-radius:14px;background:var(--accent-soft);font-size:1.6rem;margin-bottom:16px;transition:transform .3s}
+.hobbies li:hover .ico{transform:rotate(-8deg) scale(1.1)}
+.hobbies h3{font-size:1.05rem;margin-bottom:4px}
+.hobbies p{color:var(--muted);font-size:.92rem}
+@media (max-width:820px){nav{overflow-x:auto;min-width:0}nav ul{white-space:nowrap}.nav{gap:12px}}
+@media (prefers-reduced-motion:reduce){.rot{animation:none}.project:hover,.group:hover,.hobbies li:hover,.toggle:hover{transform:none}}
+
+/* Torch signature */
+.torch{--tx:-400px;--ty:-400px;position:relative;overflow:hidden;padding:88px 0 72px;background:#0a0e16;color:#cfd6e4;text-align:center}
+.torch::before{content:"";position:absolute;inset:0;pointer-events:none;background:radial-gradient(clamp(140px,26vw,300px) circle at var(--tx) var(--ty),rgba(255,226,150,.18),transparent 70%)}
+.torch .hint{position:relative;font-size:.92rem;color:#8b96ab;margin-bottom:28px}
+.tname{--r:clamp(70px,13vw,150px);--lx:-400px;--ly:-400px;display:grid;font-family:var(--serif);font-weight:600;font-size:clamp(2.6rem,12.5vw,8.5rem);line-height:1.05;letter-spacing:-.03em;position:relative}
+.tname>span{grid-area:1/1}
+.tname .base{color:#182030}
+.tname .lit{color:#ffe9a8;text-shadow:0 0 28px rgba(255,214,120,.45);-webkit-mask-image:radial-gradient(var(--r) circle at var(--lx) var(--ly),#000 0%,rgba(0,0,0,.65) 45%,transparent 100%);mask-image:radial-gradient(var(--r) circle at var(--lx) var(--ly),#000 0%,rgba(0,0,0,.65) 45%,transparent 100%)}
+.torch.open .lit{-webkit-mask-image:none;mask-image:none}
+
+/* Certifications */
+.certs{list-style:none;display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:20px}
+.certs li{background:var(--surface);border:1px solid var(--line);border-left:4px solid var(--accent);border-radius:12px;padding:22px}
+.certs h3{font-size:1.05rem;margin-bottom:4px}
+.certs p{color:var(--muted);font-size:.92rem}
+
+/* Skills */
+.skills{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.group{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:22px}
+.group h3{font-size:.98rem;margin-bottom:14px}
+.tags{display:flex;flex-wrap:wrap;gap:8px}
+.tags span{font-size:.85rem;padding:4px 12px;border-radius:99px;background:var(--accent-soft);color:var(--ink);font-weight:500}
+
+/* Projects */
+.project{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:32px;margin-bottom:24px}
+.project .kind{color:var(--accent);font-size:.88rem;font-weight:600;margin-bottom:6px}
+.project h3{font-family:var(--serif);font-size:1.6rem;font-weight:600;margin-bottom:12px;line-height:1.25}
+.project p{color:var(--muted);margin-bottom:18px}
+.project .tags{margin-bottom:22px}
+.link{font-weight:600;text-decoration:none;color:var(--accent);border-bottom:2px solid transparent;transition:border-color .2s}
+.link:hover{border-color:var(--accent)}
+.facts{list-style:none;align-self:center}
+.facts li{padding:12px 0;border-bottom:1px solid var(--line);color:var(--muted);font-size:.95rem}
+.facts li:last-child{border-bottom:0}
+.facts b{color:var(--ink);display:block;font-size:.9rem}
+.stats{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;align-self:center}
+.stat{border:1px solid var(--line);border-radius:10px;padding:16px}
+.stat strong{display:block;font-family:var(--serif);font-size:1.7rem;line-height:1.1}
+.stat span{color:var(--muted);font-size:.85rem}
+.stat.best{border-color:var(--accent);background:var(--accent-soft)}
+
+/* Contact */
+.contact{text-align:left}
+.contact .actions{margin-top:24px}
+footer{border-top:1px solid var(--line);padding:28px 0;color:var(--muted);font-size:.88rem}
+
+@media (max-width:820px){
+  .hero{padding:56px 0 48px}
+  .hero-grid,.about,.project{grid-template-columns:1fr}
+  .about{gap:28px}.photo{max-width:200px}
+  .project{padding:24px;gap:24px}
+  nav ul{gap:16px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}.fill{animation:none}.btn{transition:none}
+}
+</style>
+</head>
+<body>
+<div class="progress" id="bar" aria-hidden="true"></div>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#top">Rabiul Islam</a>
+    <nav aria-label="Main">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#certifications">Certifications</a></li>
+        <li><a href="#interests">Interests</a></li>
+      </ul>
+    </nav>
+    <button class="toggle" id="theme" type="button" aria-label="Switch light or dark theme">◐</button>
+  </div>
+</header>
+
+<main id="top">
+
+  <div class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="role">AI/ML Engineer focused on <span class="rot" id="rot">NLP</span></p>
+        <h1>I build practical AI applications with NLP and LLMs.</h1>
+        <p class="lead">I work on machine learning, natural language processing and agentic AI. I turn ideas into working, well-documented projects and measure how well they perform.</p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">View projects</a>
+          <a class="btn" href="resume.pdf">Download résumé</a>
+          <a class="btn" href="https://github.com/rabiul9137" target="_blank" rel="noopener">GitHub</a>
+        </div>
+      </div>
+
+      <aside class="panel" aria-label="Sentiment model results">
+        <h2>IMDB sentiment accuracy</h2>
+        <p class="sub">Three approaches on the same task</p>
+        <div class="row">
+          <div class="row-top"><span>BERT</span><span>90.78%</span></div>
+          <div class="track"><div class="fill best" style="width:90.78%"></div></div>
+        </div>
+        <div class="row">
+          <div class="row-top"><span>TF-IDF</span><span>89.54%</span></div>
+          <div class="track"><div class="fill" style="width:89.54%;animation-delay:.1s"></div></div>
+        </div>
+        <div class="row">
+          <div class="row-top"><span>Word2Vec</span><span>84.82%</span></div>
+          <div class="track"><div class="fill" style="width:84.82%;animation-delay:.2s"></div></div>
+        </div>
+        <p class="note">BERT also reached an F1-score of 91.01%.</p>
+      </aside>
+    </div>
+  </div>
+
+  <section id="about">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="title">About</h2></div>
+      <div class="about">
+        <img class="photo" src="profile.jpg" alt="Portrait of Rabiul Islam" width="240" height="240">
+        <div>
+          <p>I learn by building. Each project starts with a real problem, and I compare approaches to see what works best.</p>
+          <p>My work covers machine learning algorithms, NLP pipelines, transformer models and multi-agent AI workflows. I focus on LLM-powered applications and modern AI frameworks.</p>
+          <p>My goal is to keep growing as an AI/ML engineer by building reliable, useful and well-documented projects.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="title">Skills</h2>
+        <p>Tools and concepts I use in my projects.</p>
+      </div>
+      <div class="skills">
+        <div class="group"><h3>Languages and tools</h3><div class="tags"><span>Python</span><span>Git</span><span>GitHub</span><span>Streamlit</span><span>Pydantic</span></div></div>
+        <div class="group"><h3>Machine learning</h3><div class="tags"><span>Machine Learning</span><span>Deep Learning</span><span>Scikit-learn</span><span>Pandas</span><span>NumPy</span><span>Computer Vision</span></div></div>
+        <div class="group"><h3>NLP</h3><div class="tags"><span>NLP</span><span>TF-IDF</span><span>Word2Vec</span><span>BERT</span></div></div>
+        <div class="group"><h3>LLMs and agents</h3><div class="tags"><span>LLMs</span><span>RAG</span><span>Agentic AI</span><span>CrewAI</span><span>Groq</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="title">Projects</h2>
+        <p>Selected work. Each project links to its source code.</p>
+      </div>
+
+      <article class="project">
+        <div>
+          <p class="kind">Agentic AI</p>
+          <h3>Leo: multi-agent AI tutor</h3>
+          <p>A study assistant built on a multi-agent workflow. Separate agents plan lessons, explain concepts, generate quizzes and evaluate answers to support personalised learning.</p>
+          <div class="tags"><span>CrewAI</span><span>Groq</span><span>Streamlit</span><span>Pydantic</span><span>Python</span></div>
+          <a class="link" href="https://github.com/rabiul9137/leo-multi-agent-ai-tutor" target="_blank" rel="noopener">View source code</a>
+        </div>
+        <ul class="facts">
+          <li><b>Lesson planning</b>Structures a topic into a study plan.</li>
+          <li><b>Concept explanations</b>Explains ideas at the learner's level.</li>
+          <li><b>Quizzes and evaluation</b>Creates questions and checks answers.</li>
+        </ul>
+      </article>
+
+      <article class="project">
+        <div>
+          <p class="kind">Natural Language Processing</p>
+          <h3>IMDB sentiment analysis</h3>
+          <p>A comparison of traditional NLP techniques and a transformer model for classifying movie reviews as positive or negative.</p>
+          <div class="tags"><span>Python</span><span>TF-IDF</span><span>Word2Vec</span><span>BERT</span></div>
+          <a class="link" href="https://github.com/rabiul9137/sentiment-analysis-imdb" target="_blank" rel="noopener">View source code</a>
+        </div>
+        <div class="stats">
+          <div class="stat best"><strong>90.78%</strong><span>BERT accuracy</span></div>
+          <div class="stat best"><strong>91.01%</strong><span>BERT F1-score</span></div>
+          <div class="stat"><strong>89.54%</strong><span>TF-IDF accuracy</span></div>
+          <div class="stat"><strong>84.82%</strong><span>Word2Vec accuracy</span></div>
+        </div>
+      </article>
+
+      <a class="link" href="https://github.com/rabiul9137?tab=repositories" target="_blank" rel="noopener">View all repositories on GitHub</a>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact">
+      <div class="sec-head">
+        <h2 class="title">Contact</h2>
+        <p>Interested in AI, machine learning or working together? Reach out on LinkedIn or browse my code on GitHub.</p>
+      </div>
+      <div class="actions">
+        <a class="btn primary" href="https://www.linkedin.com/in/rabiulislam01/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/rabiul9137" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="resume.pdf">Download résumé</a>
+        <!-- Optional: add your email
+        <a class="btn" href="mailto:your@email.com">Email me</a> -->
+      </div>
+    </div>
+  </section>
+
+  <section id="experience">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="title">Experience</h2></div>
+      <div class="edu">
+        <div class="edu-meta">
+          <span>12 years</span>
+        </div>
+        <div>
+          <h3>IT Professional, IT Infrastructure</h3>
+          <p class="edu-desc">Twelve years of hands-on experience in IT infrastructure. This grounding in networks, systems and reliability now supports my move into AI and machine learning engineering.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="education">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="title">Education</h2></div>
+      <div class="edu">
+        <div class="edu-meta">
+          <span>2019 – 2023</span>
+        </div>
+        <div>
+          <h3>MSc in Data Science</h3>
+          <p class="school">United International University, Bangladesh</p>
+          <p class="edu-desc">Advanced study in data science, including machine learning, statistics and applied AI.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="certifications">
+    <div class="wrap">
+      <div class="sec-head"><h2 class="title">Certifications</h2></div>
+      <ul class="certs">
+        <li><h3>CCNA</h3><p>Cisco Certified Network Associate</p></li>
+        <li><h3>CCNA Security</h3><p>Cisco network security certification</p></li>
+        <li><h3>ML and AI Engineer Bootcamp</h3><p>Machine learning and AI engineering training</p></li>
+        <li><h3>Duolingo English Test</h3><p>English proficiency certificate, score 110</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="interests">
+    <div class="wrap">
+      <div class="sec-head">
+        <h2 class="title">Interests</h2>
+        <p>What I enjoy outside of code.</p>
+      </div>
+      <ul class="hobbies">
+        <li><span class="ico" aria-hidden="true">✈️</span><h3>Traveling</h3><p>Exploring new places, people and cultures.</p></li>
+        <li><span class="ico" aria-hidden="true">📰</span><h3>Reading newspapers</h3><p>Staying informed about the world and current events.</p></li>
+        <li><span class="ico" aria-hidden="true">📚</span><h3>Reading books</h3><p>Learning new ideas and perspectives, one book at a time.</p></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="torch" id="signature" aria-label="Rabiul Islam">
+    <div class="wrap">
+      <p class="hint" id="hint">Move your cursor through the dark to light up my name.</p>
+      <div class="tname" id="tname">
+        <span class="base" aria-hidden="true">Rabiul Islam</span>
+        <span class="lit">Rabiul Islam</span>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">&copy; <span id="y">2026</span> Rabiul Islam</div>
+</footer>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const root=document.documentElement,reduce=matchMedia('(prefers-reduced-motion:reduce)').matches;
+
+document.getElementById('theme').addEventListener('click',()=>{
+  const dark=root.dataset.theme?root.dataset.theme==='dark':matchMedia('(prefers-color-scheme:dark)').matches;
+  root.dataset.theme=dark?'light':'dark';
+});
+
+const bar=document.getElementById('bar');
+addEventListener('scroll',()=>{
+  bar.style.transform='scaleX('+(root.scrollTop/((root.scrollHeight-root.clientHeight)||1))+')';
+},{passive:true});
+
+const hero=document.querySelector('.hero');
+hero.addEventListener('pointermove',e=>{
+  const r=hero.getBoundingClientRect();
+  hero.style.setProperty('--mx',(e.clientX-r.left)+'px');
+  hero.style.setProperty('--my',(e.clientY-r.top)+'px');
+});
+
+if(!reduce){
+  const words=['NLP','LLM applications','agentic AI','machine learning'],el=document.getElementById('rot');
+  let i=0;
+  setInterval(()=>{
+    i=(i+1)%words.length;
+    el.textContent=words[i];
+    el.style.animation='none';el.offsetHeight;el.style.animation='';
+  },2400);
+}
+</script>
+<script>
+(function(){
+  const sec=document.getElementById('signature'),nm=document.getElementById('tname'),hint=document.getElementById('hint');
+  function aim(x,y){
+    const s=sec.getBoundingClientRect(),n=nm.getBoundingClientRect();
+    sec.style.setProperty('--tx',(x-s.left)+'px');sec.style.setProperty('--ty',(y-s.top)+'px');
+    nm.style.setProperty('--lx',(x-n.left)+'px');nm.style.setProperty('--ly',(y-n.top)+'px');
+  }
+  if(reduce){sec.classList.add('open');hint.textContent='Rabiul Islam';return;}
+  sec.addEventListener('pointermove',e=>{if(e.pointerType==='mouse')aim(e.clientX,e.clientY);});
+  if(matchMedia('(hover:none)').matches){
+    hint.textContent='Watch the torch light up my name.';
+    let t=0,vis=false;
+    new IntersectionObserver(([e])=>{vis=e.isIntersecting;}).observe(sec);
+    (function loop(){
+      if(vis){t+=.012;const n=nm.getBoundingClientRect();aim(n.left+n.width*(.5+.5*Math.sin(t)),n.top+n.height*.5);}
+      requestAnimationFrame(loop);
+    })();
+  }
+})();
+</script>
+</body>
+</html>
